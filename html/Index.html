@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>CyberGuard | Password Strength Vault</title>
+    <!-- Browser Tab Icon / Favicon - Security Shield Symbol -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300ccff'%3E%3Cpath d='M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zM12 11.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="/home/sree/Desktop/Coding/Project/Password_Strength_Check/css/style.css">
+</head>
+<body>
+    <div class="vault-container">
+        <!-- QUOTE SECTION -->
+        <div class="quote-panel" id="quotePanel">
+            <div class="quote-text" id="quoteText">"A strong password is your first line of defense."</div>
+            <div class="quote-author" id="quoteAuthor">— Cyber Guardian</div>
+            <div class="quote-dots" id="quoteDots"></div>
+        </div>
+
+        <!-- MAIN CHECKER -->
+        <div class="main-checker">
+            <div class="main-title">🛡️ How Secure is my Password?</div>
+            <div class="password-input-area">
+                <div class="password-wrapper">
+                    <input type="password" id="passwordInput" placeholder="Enter your password...">
+                    <button class="toggle-visibility" id="togglePassBtn">🙈</button>
+                </div>
+            </div>
+
+            <!-- INFO MESSAGE -->
+            <div class="info-message" id="infoMessage">
+                💡 Your password is never stored or sent anywhere. All calculations happen in your browser.<br>
+                <span id="typingHint">✨ Start typing a password to see its strength analysis...</span>
+            </div>
+
+            <div class="meter-card" style="margin-top: 1rem">
+                <h3>🔐 Password Strength Meter</h3>
+                <div class="progress-bar-bg">
+                    <div class="progress-fill" id="strengthFill" style="width: 0%; background: #ff4444"></div>
+                </div>
+                <div style="display: flex; justify-content: space-between">
+                    <span id="strengthTextLabel" style="font-weight: bold;">Very Weak</span>
+                    <span id="scoreDetails">0 / 100</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- STRENGTH TABLE & LIVE METRICS -->
+        <div class="strength-section">
+            <div class="strength-table">
+                <h3>📊 Password Strength Reference</h3>
+                <table>
+                    <thead>
+                        <tr><th>Strength</th><th>Score</th><th>Crack Estimate</th><th>Description</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>🔴 Very Weak</td><td>0-34</td><td>Seconds – minutes</td><td>Easily guessable</td></tr>
+                        <tr><td>🟠 Weak</td><td>35-49</td><td>Hours – days</td><td>Vulnerable to attacks</td></tr>
+                        <tr><td>🟡 Moderate</td><td>50-69</td><td>Weeks – months</td><td>Decent but can improve</td></tr>
+                        <tr><td>🟢 Strong</td><td>70-89</td><td>Years – decades</td><td>Good for most accounts</td></tr>
+                        <tr><td>💎 Very Strong</td><td>90-100</td><td>Centuries+</td><td>Excellent security</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="meter-card">
+                <h3>⚙️ Live Metrics</h3>
+                <div class="live-grid">
+                    <div class="live-card"><div class="live-label">📏 Length</div><div class="live-value" id="lengthStat">0</div></div>
+                    <div class="live-card"><div class="live-label">🧠 Entropy bits</div><div class="live-value" id="entropyBits">0</div></div>
+                    <div class="live-card"><div class="live-label">🔢 Strength Score</div><div class="live-value" id="scoreValue">0</div></div>
+                    <div class="live-card"><div class="live-label">🔣 Character Types</div><div class="live-value" id="charTypeCount">0</div></div>
+                </div>
+                <div class="analysis-tag" id="charMixPanel"></div>
+                <div class="security-tip-block">
+                    <div class="security-tip-text">💪 <strong>Longer + more variety = stronger password</strong> 💪</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ SECTION -->
+        <div class="faq-grid">
+            <h2>🔍 Password FAQ & Security Guide</h2>
+            <div id="faqContainer"></div>
+        </div>
+
+        <div class="client-side-badge">
+            🔒 100% client-side • No storage • Real-time analysis • Your privacy matters
+        </div>
+    </div>
+
+    <script src="/home/sree/Desktop/Coding/Project/Password_Strength_Check/js/script.js"></script>
+</body>
+</html>
