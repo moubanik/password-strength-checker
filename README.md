@@ -4,7 +4,7 @@ A modern, real-time password strength checker with entropy calculation, security
 
 ## 🚀 Live Demo
 
-[View Live Demo](https://moubanik.github.io/password-strength-checker/)
+[View Live Demo](https://moubanik.github.io/password-strength-checker/html/)
 
 ## ✨ Features
 
